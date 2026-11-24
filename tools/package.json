@@ -1,0 +1,16 @@
+{
+  "name": "colombia-music-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "maps": "mapshaper data/dptos.geojson -simplify 60% keep-shapes -o format=geojson precision=0.001 data/dptos-simplified.geojson && node build-maps.mjs",
+    "qr": "node make-qr.mjs"
+  },
+  "dependencies": {
+    "d3-geo": "^3.1.0",
+    "mapshaper": "^0.8.5",
+    "qrcode": "^1.5.4",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  }
+}
